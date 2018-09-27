@@ -1,0 +1,5 @@
+consume the json document from the Kafka queue
+filter down to just the timestamp from the server (this is a unix epoch)
+pass this as an argument to the date command to get a human-readable date
+
+ccloud consume -b -t custom | jq .timestampServer |  xargs -i date -d @"{}"
